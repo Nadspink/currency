@@ -1,0 +1,102 @@
+@import './variable.scss';
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: $default-font-size;
+
+
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
+
+.error-message {
+  width: 100%;
+  font-weight: 500;
+  color: red;
+  text-align: left;
+}
+.price-input {
+  color: $white;
+}
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: $default-font-size;
+  background: none;
+  border-radius: $default-border-radius;
+  border: solid 1px $white;
+}
+select, .default-input{
+  padding: 10px;
+  width: 100%;
+  font-size: $default-font-size;
+  &.black-input {
+    border: solid 1px $black;
+    color: $black;
+    padding:  $default-element-padding;
+  }
+}
+
+.content-wrapper {
+  display: inline-block;
+  flex-direction: column;
+  width: 100%;
+  padding: $default-element-padding;
+  border-radius: $default-border-radius;
+  border: solid 1px $white;
+  margin-bottom: 20px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.default-button {
+  display: block;
+  font-size: $default-font-size;
+  margin: 0 auto 15px auto;
+  border-radius: $default-border-radius;
+  width: 100%;
+  padding:  $default-element-padding;
+  background: none;
+  color: $white;
+  border: solid 1px $white;
+  &.black-button {
+    color: $black;
+    border: solid 1px $black;
+  }
+}
+
+button:disabled,
+button[disabled]{
+  opacity: 0.5;
+}
